@@ -6,6 +6,7 @@ button, input, select { font: inherit; }
 .topbar h1 { margin: 8px 0; }.topbar p { color: #cbd5e1; margin: 0; }.eyebrow { display: flex; align-items: center; gap: 6px; color: #fca5a5; letter-spacing: .12em; font-size: 12px; }
 .controls { display: flex; align-items: center; gap: 10px; }.controls select { border: 1px solid #475569; background: #111827; color: white; padding: 9px 12px; border-radius: 9px; }
 .demo-banner { margin-top: 16px; padding: 12px 16px; color: #78350f; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 12px; }
+.offline-banner { margin-top: 16px; padding: 12px 16px; color: #991b1b; background: #fee2e2; border: 1px solid #ef4444; border-radius: 12px; }
 .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
 .card { background: white; border: 1px solid #dbe3ee; border-radius: 16px; box-shadow: 0 8px 24px #0f172a0b; }.card-header { display: flex; justify-content: space-between; gap: 16px; padding: 19px 20px 0; }.card-header h2 { font-size: 18px; margin: 0 0 5px; }.card-content { padding: 18px 20px 20px; }.metrics span, .metrics small { display: block; color: #64748b; }.metrics strong { display: block; font-size: 27px; margin: 6px 0; }.metrics .badge { display: inline-flex; }
 .grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(340px, .9fr); gap: 20px; }.stack { display: flex; flex-direction: column; gap: 20px; }
@@ -14,3 +15,29 @@ button, input, select { font: inherit; }
 form label { display: block; margin-bottom: 4px; font-weight: 650; }.input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 9px; margin-bottom: 4px; }
 .timeline { display: flex; flex-direction: column; }.timeline article { display: grid; grid-template-columns: 16px 1fr; gap: 10px; padding-bottom: 18px; position: relative; }.timeline article i { width: 10px; height: 10px; margin-top: 4px; border-radius: 50%; background: #e11d48; box-shadow: 0 0 0 4px #fee2e2; }.timeline article:not(:last-child)::after { content: ""; position: absolute; left: 4px; top: 16px; bottom: 0; width: 1px; background: #cbd5e1; }.timeline-meta { display: flex; justify-content: space-between; color: #64748b; font-size: 12px; }.timeline p { margin: 6px 0 0; }
 @media (max-width: 900px) { .metrics { grid-template-columns: repeat(2, 1fr); }.grid { grid-template-columns: 1fr; }.topbar { flex-direction: column; }.action-row { flex-direction: column; } }
+
+.badge.pending { background: #f1f5f9; color: #475569; }
+.badge.approved { background: #dbeafe; color: #1d4ed8; }
+.badge.queued { background: #fef3c7; color: #b45309; }
+.badge.executing { background: #ede9fe; color: #6d28d9; }
+.badge.executed { background: #dcfce7; color: #15803d; }
+.badge.online { background: #dcfce7; color: #15803d; }
+.action-title-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.action-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-top: 6px; }
+.asset-chips { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.asset-chip { display: inline-flex; align-items: center; gap: 4px; background: #f1f5f9; border-radius: 6px; padding: 2px 7px; font-size: 12px; }
+.asset-remove { display: inline-flex; align-items: center; border: 0; background: transparent; color: #94a3b8; cursor: pointer; padding: 0; }
+.asset-remove:hover { color: #b91c1c; }
+.queued-note { color: #b45309; font-size: 12px; margin-top: 4px; }
+.queued-list { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #e2e8f0; }
+.queued-list h4 { margin: 0 0 6px; font-size: 13px; color: #64748b; }
+.deadline { color: #b91c1c; font-size: 12px; margin-top: 4px; }
+.invalid-note { color: #b91c1c; font-size: 12px; margin-top: 4px; }
+.receipt-note { font-size: 12px; margin-top: 4px; color: #6d28d9; }
+.receipt-note.ok { color: #15803d; }
+.occupancy-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid #e2e8f0; }
+.occupancy-row:last-of-type { border-bottom: 0; }
+.asset-editor { display: flex; gap: 8px; margin-top: 10px; }
+.asset-editor .input { margin-bottom: 0; }
+.asset-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.card-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
